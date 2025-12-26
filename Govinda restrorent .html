@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govinda’s Restaurant | Mathura</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F9F7F2',
+                        'cream-dark': '#EFECE5',
+                        saffron: '#B45309',       /* Deep Ochre/Saffron */
+                        'saffron-light': '#D97706',
+                        'vedic-green': '#14532D', /* Dark Spiritual Green */
+                        'gold-accent': '#C2A355',
+                        'dark-text': '#1F2937'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=2070&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        /* Premium Map Filter */
+        iframe {
+            filter: grayscale(20%) contrast(90%);
+        }
+    </style>
+</head>
+<body class="bg-cream text-dark-text font-sans antialiased selection:bg-saffron selection:text-white">
+
+    <nav class="absolute w-full z-50 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-white font-serif text-2xl tracking-wide font-bold">
+                GOVINDA’S
+            </div>
+            <div class="hidden md:flex space-x-8 text-white/90 font-medium text-sm tracking-widest uppercase">
+                <a href="#about" class="hover:text-saffron-light transition">About</a>
+                <a href="#menu" class="hover:text-saffron-light transition">Specialties</a>
+                <a href="#gallery" class="hover:text-saffron-light transition">Gallery</a>
+                <a href="#contact" class="border border-white/30 px-5 py-2 rounded-full hover:bg-white hover:text-vedic-green transition duration-300">Visit Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-fixed">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl fade-in-section is-visible">
+            <span class="block text-gold-accent text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-bold">Krishna Nagar • Mathura</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-cream mb-6 leading-tight">
+                Govinda’s <br> <span class="text-3xl md:text-5xl italic font-normal text-gray-200">Restaurant</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl font-light mb-10 tracking-wide">
+                Pure Vegetarian • Peaceful Dining • Divine Taste
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-saffron hover:bg-saffron-light text-white px-8 py-4 rounded-full font-medium transition duration-300 shadow-lg hover:shadow-saffron/30 text-sm tracking-wider uppercase">
+                    View Menu
+                </a>
+                <a href="#contact" class="bg-transparent border border-white text-white hover:bg-white hover:text-vedic-green px-8 py-4 rounded-full font-medium transition duration-300 text-sm tracking-wider uppercase">
+                    Visit Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-cream text-center fade-in-section">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="w-16 h-1 bg-saffron mx-auto mb-8 rounded-full"></div>
+            <h2 class="font-serif text-4xl md:text-5xl text-vedic-green mb-8">Satvik Dining in Mathura</h2>
+            <p class="text-lg text-gray-600 leading-relaxed font-light">
+                Nestled in the heart of Krishna Nagar, Govinda’s offers more than just a meal; we offer a 
+                <span class="text-saffron font-semibold">prasadam-style experience</span>. 
+                Designed for families and devotees seeking purity, our kitchen maintains the highest standards of hygiene and spirituality. 
+                Enjoy a calm atmosphere loved by locals, away from the chaos, where every dish is prepared with devotion.
+            </p>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 bg-cream-dark fade-in-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-saffron font-bold tracking-widest uppercase text-xs">Why Choose Us</span>
+                <h2 class="font-serif text-4xl text-dark-text mt-3">Our Commitments</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-cream p-10 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-500 border-t-4 border-saffron text-center">
+                    <div class="w-12 h-12 bg-saffron/10 text-saffron rounded-full flex items-center justify-center mx-auto mb-6 text-xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-vedic-green">Pure Vegetarian</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">100% Meat-free and egg-free meals prepared with fresh, locally sourced ingredients.</p>
+                </div>
+
+                <div class="bg-cream p-10 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-500 border-t-4 border-vedic-green text-center">
+                    <div class="w-12 h-12 bg-vedic-green/10 text-vedic-green rounded-full flex items-center justify-center mx-auto mb-6 text-xl">
+                        <i class="fa-solid fa-hands-bubbles"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-vedic-green">Hygiene First</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A spotless open kitchen environment ensuring trust and cleanliness in every bite.</p>
+                </div>
+
+                <div class="bg-cream p-10 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-500 border-t-4 border-saffron text-center">
+                    <div class="w-12 h-12 bg-saffron/10 text-saffron rounded-full flex items-center justify-center mx-auto mb-6 text-xl">
+                        <i class="fa-solid fa-om"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-vedic-green">Peaceful Ambience</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Soft music, warm lighting, and a noise-free environment perfect for family conversations.</p>
+                </div>
+
+                <div class="bg-cream p-10 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-500 border-t-4 border-vedic-green text-center">
+                    <div class="w-12 h-12 bg-vedic-green/10 text-vedic-green rounded-full flex items-center justify-center mx-auto mb-6 text-xl">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-vedic-green">Prasadam Style</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Food cooked with a devotional consciousness, offering a taste that satisfies the soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-vedic-green text-cream fade-in-section">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center gap-1 text-gold-accent mb-4 text-xl">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h3 class="font-serif text-3xl md:text-4xl mb-4">"The most peaceful dining in Mathura."</h3>
+            <p class="text-white/70 font-light tracking-wide">Rated 4.7/5 • Loved by Locals & Pilgrims</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-cream fade-in-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-4xl text-dark-text">Our Kitchen Gallery</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                <div class="md:col-span-2 rounded-2xl overflow-hidden group relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=2070&auto=format&fit=crop" alt="Thali" class="w-full h-full object-cover transition transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+                </div>
+                <div class="rounded-2xl overflow-hidden group relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop" alt="Salad" class="w-full h-full object-cover transition transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="rounded-2xl overflow-hidden group relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=1887&auto=format&fit=crop" alt="Paneer" class="w-full h-full object-cover transition transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="md:col-span-2 rounded-2xl overflow-hidden group relative shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=2000&auto=format&fit=crop" alt="Interior" class="w-full h-full object-cover transition transform duration-700 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-cream-dark fade-in-section">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                
+                <div class="w-full md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
+                    <h2 class="font-serif text-3xl text-vedic-green mb-8">Visit Govinda’s</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-cream p-3 rounded-full text-saffron shrink-0">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-text uppercase text-xs tracking-widest mb-1">Location</h4>
+                                <p class="text-gray-600">Near Deep Nursing Home,<br>Krishna Nagar, Mathura, UP 281004</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-cream p-3 rounded-full text-saffron shrink-0">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-text uppercase text-xs tracking-widest mb-1">Contact</h4>
+                                <p class="text-gray-600">+91 98765 43210</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-cream p-3 rounded-full text-saffron shrink-0">
+                                <i class="fa-regular fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-text uppercase text-xs tracking-widest mb-1">Hours</h4>
+                                <p class="text-gray-600">11:00 AM – 10:30 PM<br>(Open All Days)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 h-80 md:h-auto bg-gray-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.467389828551!2d77.671!3d27.492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDI5JzMxLjIiTiA3N8KwNDAnMTUuNiJF!5e0!3m2!1sen!2sin!4v1635756000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-vedic-green text-cream-dark py-12 border-t border-white/10">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h4 class="font-serif text-2xl font-bold mb-2">GOVINDA’S</h4>
+                <p class="text-sm opacity-60">Pure Vegetarian Restaurant • Mathura</p>
+            </div>
+            <div class="text-sm opacity-50">
+                &copy; 2024 Govinda’s Restaurant. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fade In Animation Observer
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in-section');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
